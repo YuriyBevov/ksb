@@ -1,0 +1,46 @@
+.portfolio {
+
+  .masonry {
+
+    &-sizer,
+    &-item {
+      width: 19%;
+
+      @include m-b-tablet-lg-down {
+        width: 24%;
+      }
+      @include m-b-tablet-down {
+        width: 32%;
+      }
+      @include m-b-mobile-lg-down {
+        width: 49%;
+      }
+    }
+
+    &-item {
+      display: flex;
+      margin-bottom: 1%;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    .gutter-sizer {
+      width: 1%;
+    }
+  }
+
+  &__btn {
+    max-width: 180px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-color: var(--accent);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent);
+    }
+  }
+}

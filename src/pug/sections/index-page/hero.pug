@@ -1,0 +1,35 @@
+include ../../mixins/main-btn
+
+section.hero#hero
+  .lw-container.hero__container
+    .hero__content
+
+      h1.lw-main-title Алюминиевые двери <br>на&nbsp;заказ
+
+      p.lw-main-text.hero__text
+        span Конструкции из стекла и алюминиевого профиля напрямую с завода в Санкт-Петербурге.<br>
+        span Выполняем заказы любого объема, двери различных видов и размеров.
+
+      ul.hero__list
+        li
+          span 160 000 +
+          span.lw-main-text конструкций изготовлено за 15 лет
+
+        li
+          span 95 %
+          span.lw-main-text клиентов готовы нас рекомендовать
+
+        li
+          span 2008
+          span.lw-main-text год основания компании
+
+      +main-btn({
+        title: 'Оставить заявку',
+        cls: 'js-callback-modal-opener',
+        dataModalTitle: 'Оставить заявку',
+        dataModalText: 'Заполните форму, и бязательно свяжемся с вами',
+        modal: 'callback',
+        url: '#',
+
+      })
+

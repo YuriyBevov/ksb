@@ -1,0 +1,89 @@
+include ../../mixins/section-title
+include ../../mixins/main-slider
+
+section.licenses#licenses
+  .lw-container
+    +section-title({
+      tag: 'h2',
+      title: 'Лицензии и <span>сертификаты</span>'
+    })
+
+    +main-slider({
+      cls: 'licenses__slider',
+      fancyboxGallery: 'licenses',
+      slides: [
+        {
+          img: 'licenses/license_1',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Лицензия МЧС(1 стр.)'
+        },
+
+        {
+          img: 'licenses/license_2',
+          imgWidth: '303200',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Лицензия МЧС(2 стр.)'
+        },
+
+        {
+          img: 'licenses/license_3',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Санитарно-эпидемиологическое заключение на двери металлические противопожарные(стр.1)'
+        },
+
+        {
+          img: 'licenses/license_4',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Санитарно-эпидемиологическое заключение на двери металлические противопожарные(стр.2)'
+        },
+
+        {
+          img: 'licenses/license_5',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Санитарно-эпидемиологическое заключение на двери металлические противопожарные (стр.3)'
+        },
+
+        {
+          img: 'licenses/license_6',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Сертификат на противопожарные Двери без порога до 30.11.26г '
+        },
+
+        {
+          img: 'licenses/license_7',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Сертификат на противопожарные Двери до 30.11.26г '
+        },
+
+        {
+          img: 'licenses/license_8',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'Сертификат на противопожарные Ворота до 29.11.26г '
+        },
+
+        {
+          img: 'licenses/license_9',
+          imgWidth: '320',
+          imgHeight: '480',
+          limitStr: 75,
+          txt: 'ертификат на противопожарные Люки до 29.11.26г'
+        },
+      ]
+    })
+
+

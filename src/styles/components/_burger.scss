@@ -1,0 +1,22 @@
+.burger {
+  @extend .btn-reset;
+  @extend .flex-centered-content;
+  margin-left: 10px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 10px;
+
+  svg {
+    fill: var(--white);
+    transition: fill var(--main-transition), opacity var(--fast-transition);
+
+    &:hover,
+    &:focus {
+      fill: var(--warning);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

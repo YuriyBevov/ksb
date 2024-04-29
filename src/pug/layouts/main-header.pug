@@ -1,0 +1,16 @@
+header.header
+  .lw-container.header__container
+    include ../includes/company-logo
+
+    .header__nav
+      include ../components/nav
+    .header__phone
+      include ../includes/company-phone
+
+    button(type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback" data-modal-title="Заказать звонок" data-modal-text="Заполните форму, и мы перезвоним Вам").lw-main-btn.header__callback-btn.js-callback-modal-opener
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-phone")
+      span Заказать звонок
+
+    include ../components/burger
+
