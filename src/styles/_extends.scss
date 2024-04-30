@@ -27,6 +27,20 @@
   fill: var(--svg-fill-color);
 }
 
+// .footer-line {
+//   position: relative;
+
+//   &::before {
+//     position: absolute;
+//     top: 0;
+//     left: var(--container-offset);
+//     width: calc(100% - (var(--container-offset) * 2));
+//     height: 1px;
+//     content: "";
+//     background-color: var(--primary);
+//   }
+// }
+
 /*scroll*/
 .main-scroll {
   &::-webkit-scrollbar {

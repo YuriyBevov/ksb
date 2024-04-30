@@ -3248,12 +3248,12 @@ address {
 }
 
 /*transitions*/
-.hover-opacity, .footer__field--contacts .company-mail, .header__phone a, .lw-text-content p a {
+.hover-opacity, .footer__field--contacts .company-mail, .footer__top-phone a, .header__phone a, .lw-text-content p a {
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
-.hover-opacity:hover, .footer__field--contacts .company-mail:hover, .header__phone a:hover, .lw-text-content p a:hover, .hover-opacity:focus, .footer__field--contacts .company-mail:focus, .header__phone a:focus, .lw-text-content p a:focus {
+.hover-opacity:hover, .footer__field--contacts .company-mail:hover, .footer__top-phone a:hover, .header__phone a:hover, .lw-text-content p a:hover, .hover-opacity:focus, .footer__field--contacts .company-mail:focus, .footer__top-phone a:focus, .header__phone a:focus, .lw-text-content p a:focus {
   opacity: 0.7;
 }
 
@@ -3302,7 +3302,7 @@ address {
 .lw-main-btn:active {
   opacity: 0.6;
 }
-.lw-main-text {
+.lw-main-text, .footer__field--nav .nav__list-item a, .footer__field-title {
   font-weight: 400;
   font-size: clamp(14px, 1.8vw, 18px);
   color: var(--text-color);
@@ -3362,10 +3362,10 @@ address {
   font-weight: 600;
   color: var(--dark);
 }
-.lw-nav-item-before-line, .footer__field--nav .nav__list-item, .header__nav .nav__list-item {
+.lw-nav-item-before-line, .header__nav .nav__list-item {
   position: relative;
 }
-.lw-nav-item-before-line::before, .footer__field--nav .nav__list-item::before, .header__nav .nav__list-item::before {
+.lw-nav-item-before-line::before, .header__nav .nav__list-item::before {
   position: absolute;
   top: 17px;
   left: 0;
@@ -4267,35 +4267,99 @@ address {
 
 /* Секции конец*/
 .footer {
-  padding-top: 40px;
-  font-size: 14px;
-  background-color: var(--black);
+  display: -ms-grid;
+  display: grid;
+  color: #505050;
 }
-.footer__container {
-  margin-bottom: 40px;
-}
-.footer .lw-title-xs {
-  display: inline-block;
-  margin-bottom: 30px;
-  color: var(--white);
-}
-.footer__field {
-  width: 33.3333333333%;
-}
-.footer__field--logo {
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 25px clamp(15px, 2vw, 25px);
   width: 100%;
   margin-bottom: 40px;
+}
+.footer__top .company-logo {
+  margin-right: auto;
+}
+.footer__top-phone a {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.footer__top-phone a svg {
+  display: none;
+  fill: var(--white);
+}
+@media (max-width: 533px) {
+  .footer__top-phone a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--primary);
+  }
+  .footer__top-phone a svg {
+    display: block;
+  }
+  .footer__top-phone a span {
+    display: none;
+  }
+}
+.footer__top .footer__offer-btn {
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+}
+.footer__top .footer__offer-btn svg {
+  display: none;
+}
+@media (max-width: 767px) {
+  .footer__top .footer__offer-btn {
+    width: 100%;
+  }
+}
+.footer__field {
+  width: 50%;
+}
+@media (max-width: 680px) {
+  .footer__field {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.footer__field-title {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+@media (max-width: 959px) {
+  .footer__field-title {
+    font-size: 18px;
+  }
 }
 .footer__field--law-info {
   padding-right: 20px;
   max-width: 420px;
 }
 .footer__field--law-info .company-law-info__field {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-.footer__field--law-info .company-law-info__field span, .footer__field--law-info .company-law-info__field address {
+.footer__field--law-info .company-law-info__field span,
+.footer__field--law-info .company-law-info__field address {
   display: inline;
-  color: var(--white);
 }
 .footer__field--law-info .company-law-info__field span:first-child {
   padding-right: 10px;
@@ -4307,38 +4371,54 @@ address {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 620px;
+  max-width: 1080px;
   padding: 0 20px;
   margin: 0 auto;
   margin-top: -8px;
+}
+@media (max-width: 680px) {
+  .footer__field--nav {
+    padding: 0;
+  }
 }
 .footer__field--nav .nav__list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 250px;
+  width: 33.3333333333%;
+  min-width: 260px;
   padding-left: 12px;
 }
-@media (max-width: 1360px) {
+.footer__field--nav .nav__list-item a {
+  font-weight: 700;
+  color: var(--primary);
+}
+@media (max-width: 959px) {
   .footer__field--nav .nav__list-item {
     width: 100%;
+    min-width: initial;
+    padding: 0;
+  }
+  .footer__field--nav .nav__list-item a {
+    font-size: 18px;
   }
 }
-.footer__field--nav .nav__list-item--confidentiality {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 680px) {
+  .footer__field--nav .nav__list-item {
+    padding-left: 0;
+  }
+  .footer__field--nav .nav__list-item a {
+    padding-left: 0;
+  }
 }
 .footer__field--contacts {
   max-width: 320px;
 }
-.footer__field--contacts span, .footer__field--contacts a, .footer__field--contacts address {
+.footer__field--contacts span,
+.footer__field--contacts a,
+.footer__field--contacts address {
   display: block;
   margin-bottom: 10px;
-  color: var(--white);
 }
 .footer__field--contacts .company-worktime,
 .footer__field--contacts .company-phone,
@@ -4358,33 +4438,14 @@ address {
   font-size: 18px;
   font-weight: 600;
 }
-@media (max-width: 959px) {
-  .footer__field {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  .footer__field--nav {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-  }
-  .footer__field--contacts {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-  }
-  .footer__field--law-info {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary);
+  margin: 30px 0;
 }
 .footer__bottom {
-  padding: 20px 0;
-  background-color: var(--darkness);
+  padding-bottom: 40px;
 }
 .footer__bottom-container {
   display: -ms-grid;
