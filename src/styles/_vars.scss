@@ -4,9 +4,9 @@
 :root {
   // base
   --font-family: "Manrope", sans-serif;
-  --content-width: 1440px;
+  --content-width: 1680px;
   --content-fluid-width: 1790px;
-  --container-offset: clamp(20px, 6vw, 120px);
+  --container-offset: clamp(20px, 6vw, 100px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-fluid-width: calc(
     var(--content-fluid-width) + (var(--container-offset) * 2)
@@ -17,29 +17,34 @@
   --black: #232323;
 
   --primary: #2d5183;
-  --warning: #d1be99;
-  --danger: #f09926;
-  --light: #fafafb;
-  --dark: #505050;
-  --darkness: #171717;
-  --text-color: var(--dark);
-  --success: #21bf73;
-  --error: #ff3030;
+  --secondary: #8fa4c0;
+  --light: #f2f7fd;
+  --gray: #8d8d8d;
 
-  --alt-bg: var(--light);
-  --main-bg: var(--white);
+  --svg-fill-color: var(--secondary);
+  --main-bg-color: var(--light);
+  --info-card-bg: #f9fbfe;
+  --main-offset: clamp(24px, 2.5vw, 40px);
 
-  --main-bottom-offset: clamp(24px, 2.5vw, 50px);
+  // scrollbar
+  --main-scrollbar-width: 10px;
+  --main-scrollbar-color: var(--light);
+  --main-scrollbar-thumb-color: var(--primary);
 
   --modal-bg-color: var(--white);
   --retina-dppx: 1.5dppx;
   --retina-dpi: 144dpi;
 
-  // scrollbar
-  --main-scrollbar-width: 10px;
-  --main-scrollbar-color: var(--white);
-  --main-scrollbar-thumb-color: var(--warning);
-
   --main-transition: 0.25s 0.05s ease-in;
   --fast-transition: 0.1s ease-in;
+
+  //
+  --warning: #d1be99;
+  --danger: #f09926;
+
+  --dark: #505050;
+  --darkness: #171717;
+  --text-color: var(--dark);
+  --success: #21bf73;
+  --error: #ff3030;
 }

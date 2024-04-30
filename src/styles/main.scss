@@ -7,36 +7,42 @@
 @import "extends";
 @import "common";
 
-
-
 @import "./layout/header";
 
 /* Компоненты */
-@import "./components/webp-bg";
-@import "./components/includes-common";
-@import "./components/nav";
+
 @import "./components/burger";
-@import "./components/tags";
-@import "./components/info-card";
-@import "./components/main-slider";
-@import "./components/offer-form";
-@import "./components/callback-form";
+@import "./components/nav";
+@import "./components/feature-card"; // fin
+@import "./components/workflow-card"; // fin
 @import "./components/loader";
-@import "./components/law-info";
+@import "./components/main-slider"; // fin
+
+//
+// @import "./components/webp-bg";
+// @import "./components/includes-common";
+// @import "./components/tags";
+
+// @import "./components/offer-form";
+// @import "./components/callback-form";
+
+// @import "./components/law-info";
 /* Компоненты конец*/
 
 /* Секции */
-@import "./views/index-page/hero";
-@import "./views/index-page/features";
-@import "./views/index-page/company";
-@import "./views/index-page/portfolio";
+@import "./views/index-page/hero"; // fin
+@import "./views/index-page/features"; // fin
 @import "./views/index-page/workflow";
-@import "./views/index-page/guarantee";
-@import "./views/index-page/licenses"; // empty
-@import "./views/index-page/delivery";
-@import "./views/index-page/offer";
-@import "./views/index-page/objects"; // empty
-@import "./views/index-page/contacts";
+@import "./views/index-page/portfolio"; // fin
+@import "./views/index-page/licenses"; // fin
+
+// @import "./views/index-page/company";
+// @import "./views/index-page/portfolio";
+
+// @import "./views/index-page/guarantee";
+// @import "./views/index-page/delivery";
+// @import "./views/index-page/offer";
+// @import "./views/index-page/contacts";
 /* Секции конец*/
 
 @import "./layout/footer";
@@ -46,4 +52,3 @@
 @import "./modals/callback-modal";
 @import "./modals/state-modal";
 @import "./modals/law-modal";
-

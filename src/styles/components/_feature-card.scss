@@ -1,0 +1,28 @@
+.feature-card {
+  @extend .lw-info-card;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    svg {
+      @extend .main-svg-icon;
+    }
+
+    span {
+      @extend .lw-main-text--accent;
+    }
+  }
+
+  &__content {
+    p {
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

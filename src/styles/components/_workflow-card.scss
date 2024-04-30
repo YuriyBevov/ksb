@@ -1,0 +1,27 @@
+.workflow-card {
+  @extend .lw-info-card;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: clamp(12px, 3vw, 20px);
+
+    svg {
+      @extend .main-svg-icon;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: clamp(30px, 6vw, 60px);
+
+      color: var(--secondary);
+    }
+  }
+
+  &__content {
+    span {
+    }
+  }
+}

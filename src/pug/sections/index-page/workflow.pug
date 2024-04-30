@@ -1,46 +1,53 @@
 include ../../mixins/section-title
+include ../../mixins/workflow-card
 
 section.workflow#workflow
   .lw-container
     +section-title({
       tag: 'h2',
-      title: 'Этапы <span>работ</span>'
+      title: 'Этапы <span>работы</span>'
     })
 
     ul.workflow__list
-      li.workflow__list-item
-        svg(width="50" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-01")
 
-        span Мы принимаем от Вас заявку или техническое задание.
+      li
+        +workflow-card({
+          icon: 'workflow_1',
+          num: '01',
+          text: 'Принимаем заявку'
+        })
 
-      li.workflow__list-item
-        svg(width="68" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-02")
+      li
+        +workflow-card({
+          icon: 'workflow_2',
+          num: '02',
+          text: 'Расчёт стоимость заказа'
+        })
 
-        span Менеджер отдела продаж подготавливает предварительное&nbsp;КП.
+      li
+        +workflow-card({
+          icon: 'workflow_3',
+          num: '03',
+          text: 'Выезд на замер'
+        })
 
-      li.workflow__list-item
-        svg(width="68" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-03")
+      li
+        +workflow-card({
+          icon: 'workflow_4',
+          num: '04',
+          text: 'Согласование Спецификации'
+        })
+      li
+        +workflow-card({
+          icon: 'workflow_5',
+          num: '05',
+          text: 'Поступление оплаты и запуск заказа в производство'
+        })
+      li
+        +workflow-card({
+          icon: 'workflow_6',
+          num: '06',
+          text: 'Доставка и монтаж'
+        })
 
-        span Наш специалист выезжает на&nbsp;объект для&nbsp;замера проемов.
-
-      li.workflow__list-item
-        svg(width="68" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-04")
-
-        span Согласовываем спецификацию на&nbsp;изготовление.
-
-      li.workflow__list-item
-        svg(width="68" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-05")
-
-        span На основании спецификации и&nbsp;после оплаты заказ запускаем в&nbsp;производство.
-
-      li.workflow__list-item
-        svg(width="68" height="32")
-          use(xlink:href="./assets/sprite.svg#icon-06")
-
-        span Осуществляется доставка на&nbsp;объект и&nbsp;приступаем к&nbsp;монтажным работам.
 

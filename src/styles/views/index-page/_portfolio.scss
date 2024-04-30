@@ -1,46 +1,50 @@
 .portfolio {
-
-  .masonry {
-
-    &-sizer,
-    &-item {
-      width: 19%;
-
-      @include m-b-tablet-lg-down {
-        width: 24%;
-      }
-      @include m-b-tablet-down {
-        width: 32%;
-      }
-      @include m-b-mobile-lg-down {
-        width: 49%;
-      }
-    }
-
-    &-item {
-      display: flex;
-      margin-bottom: 1%;
-
-      &.hidden {
-        display: none;
-      }
-    }
-
-    .gutter-sizer {
-      width: 1%;
-    }
+  &__btn {
+    max-width: 480px;
+    margin: var(--main-offset) auto;
   }
 
-  &__btn {
-    max-width: 180px;
-    margin: 0 auto;
-    margin-top: 60px;
-    border-color: var(--accent);
-    background-color: transparent;
+  &__slider {
+    position: relative;
 
-    &:hover,
-    &:focus {
-      background-color: var(--accent);
+    .swiper-wrapper {
+      margin-bottom: 0;
+    }
+
+    .swiper-slide img {
+      border-radius: 10px;
+    }
+
+    .main-slider-controls {
+      position: static;
+    }
+
+    .main-slider-pagination {
+      display: none;
+    }
+
+    .main-slider-navigation {
+      .main-slider-button-next,
+      .main-slider-button-prev {
+        top: 50%;
+        position: absolute;
+        left: clamp(10px, 2.2vw, 20px);
+
+        background-color: var(--white);
+
+        z-index: 1000;
+      }
+
+      .main-slider-button-prev {
+        transform-origin: top;
+        transform: rotate(180deg) translateY(-50%);
+      }
+
+      .main-slider-button-next {
+        left: initial;
+        right: clamp(10px, 2.2vw, 20px);
+        transform: translateY(-50%);
+      }
     }
   }
 }

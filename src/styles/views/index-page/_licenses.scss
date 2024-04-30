@@ -1,3 +1,14 @@
-/*.licenses {
+.licenses {
+  &-slide {
+    &-title {
+      @extend .lw-main-text--accent;
+      text-transform: initial;
+      @include text-truncate(2);
+    }
 
-}*/
+    &-text {
+      @include text-truncate(5);
+      margin-top: 0;
+    }
+  }
+}

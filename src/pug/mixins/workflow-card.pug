@@ -1,0 +1,9 @@
+mixin workflow-card(data)
+  .workflow-card
+    .workflow-card__header
+      svg(width="60" height="60")
+        use(xlink:href=`./assets/sprite.svg#icon-${data.icon}`)
+      span.lw-main-text!= data.num
+
+    .workflow-card__content
+      span.lw-main-text.lw-main-text--accent!= data.text

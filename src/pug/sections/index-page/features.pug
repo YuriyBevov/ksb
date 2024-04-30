@@ -1,7 +1,7 @@
 include ../../mixins/section-title
-include ../../mixins/info-card
+include ../../mixins/feature-card
 
-section.features.lw-alt-bg#features
+section.features#features
   .lw-container
     +section-title({
       tag: 'h2',
@@ -10,43 +10,48 @@ section.features.lw-alt-bg#features
 
     ul.features__list
       li
-        +info-card({
-          icon: 'guarantee',
-          title: 'Сертификаты и&nbsp;лицензии',
-          text: '<p>Все выпускаемые на производстве изделия имеют необходимые сертификаты.</p><p>Противопожарные двери сопровождаются Паспортом изделия, и шильдой.</p> <p>Для выполнения монтажных работ мы получили Лицензию МЧС</p>'
+        +feature-card({
+          icon: 'feature-1',
+          title: 'Комфорт',
+          text: 'Алюминиевые профильные системы обеспечивают комфортный микроклимат в помещениях, надежно защищая его от холода, протечек и шума.'
         })
 
       li
-        +info-card({
-          icon: 'user',
-          title: 'Индивидуальный подход',
-          text: '<p>Изготавливаем двери, люки, ворота по Вашим размерам и в индивидуальной комплектации.</p><p>Окрашиваем изделия в нужный цвет.</p>'
+        +feature-card({
+          icon: 'feature-2',
+          title: 'Долговечность',
+          text: 'Срок службы конструкций исчисляется десятилетиями. А так же мы предоставляем гарантию на все наши изделия.'
         })
 
       li
-        +info-card({
-          icon: 'installation',
-          title: 'Автоматизированая линия <br>с контролем ОТК',
-          text: '<p>Мы имеем развитые производственные мощности, ориентированные как на индивидуальные заказы, так и на оптовые поставки противопожарных дверей, технических дверей, ворот, люков.</p><p>Каждое изделие, выпущенное с нашего производства, проходит контроль ОТК.</p>'
+        +feature-card({
+          icon: 'feature-3',
+          title: 'Прочность',
+          text: 'Повышенная прочность. Заявленная прочность достигается благодаря особому сплаву алюминия, в котором сочетается медь с магнием.'
         })
 
-      li
-        +info-card({
-          icon: 'machine',
-          title: 'Монтаж в день доставки',
-          text: '<p>Наличие собственного автопарка и штат монтажных бригад, позволяет приступать к монтажным работам в день доставки заказа на объект.</p>'
-        })
+    .features__bottom
+      img(src="./assets/img/lw-feature-image.png" alt="Монтажник" width="800" height="600")
 
-      li
-        +info-card({
-          icon: 'price',
-          title: 'Цены от производителя',
-          text: '<p>Гибкое ценообразование и оптимальные условия сотрудничества.</p>'
-        })
+      ul
+        li
+          svg(width="60" height="60")
+            use(xlink:href=`./assets/sprite.svg#icon-garantee`)
 
-      li
-        +info-card({
-          icon: 'calendar',
-          title: 'Короткие сроки',
-          text: '<p>Настроенный производственный процесс, позволяет выполнять срочные заказы со сроками изготовления от 2-3 дней.</p>'
-        })
+          span.lw-main-text Гарантия на изделия до 3 лет
+        li
+          svg(width="60" height="60")
+            use(xlink:href=`./assets/sprite.svg#icon-contract`)
+
+          span.lw-main-text Производство по ГОСТ
+        li
+          svg(width="60" height="60")
+            use(xlink:href=`./assets/sprite.svg#icon-price`)
+
+          span.lw-main-text Цена от производителя
+        li
+          svg(width="60" height="60")
+            use(xlink:href=`./assets/sprite.svg#icon-repair`)
+
+          span.lw-main-text Проффесиональный монтаж
+

@@ -1,0 +1,10 @@
+mixin feature-card(data)
+  .feature-card
+    .feature-card__header
+      svg(width="60" height="60")
+        use(xlink:href=`./assets/sprite.svg#icon-${data.icon}`)
+
+      span.lw-main-text!= data.title
+
+    .feature-card__content
+      p.lw-main-text!= data.text

@@ -1,16 +1,20 @@
-import {Swiper, Navigation, Pagination } from 'swiper';
+import { Swiper, Navigation, Pagination } from "swiper";
 
-const sliders = document.querySelectorAll('.main-slider');
+const sliders = document.querySelectorAll(".main-slider");
 
-if(sliders) {
-  sliders.forEach(slider => {
-    const btnNext = slider.closest('section').querySelector('.main-slider-button-next');
-    const btnPrev = slider.closest('section').querySelector('.main-slider-button-prev');
+if (sliders) {
+  sliders.forEach((slider) => {
+    const btnNext = slider
+      .closest("section")
+      .querySelector(".main-slider-button-next");
+    const btnPrev = slider
+      .closest("section")
+      .querySelector(".main-slider-button-prev");
 
     new Swiper(slider, {
       modules: [Navigation, Pagination],
 
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: 15,
       preloadImages: true,
 
@@ -21,7 +25,8 @@ if(sliders) {
 
       pagination: {
         el: ".main-slider-pagination",
-        type: "fraction",
+        // type: "fraction",
+        dynamicBullets: true,
       },
 
       breakpoints: {
@@ -32,17 +37,14 @@ if(sliders) {
 
         668: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
 
         960: {
           slidesPerView: 4,
-          spaceBetween: 40,
-        }
-      }
+          spaceBetween: 30,
+        },
+      },
     });
   });
-};
-
-
-
+}
