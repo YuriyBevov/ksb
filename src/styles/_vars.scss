@@ -20,6 +20,7 @@
   --secondary: #8fa4c0;
   --light: #f2f7fd;
   --gray: #8d8d8d;
+  --dark: #505050;
 
   --svg-fill-color: var(--secondary);
   --main-bg-color: var(--light);
@@ -39,12 +40,12 @@
   --fast-transition: 0.1s ease-in;
 
   //
-  --warning: #d1be99;
-  --danger: #f09926;
+  // --warning: #d1be99;
+  // --danger: #f09926;
 
-  --dark: #505050;
-  --darkness: #171717;
-  --text-color: var(--dark);
+  // --dark: #505050;
+  // --darkness: #171717;
+  // --text-color: var(--dark);
   --success: #21bf73;
   --error: #ff3030;
 }

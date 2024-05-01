@@ -15,15 +15,17 @@
 @import "./components/nav";
 @import "./components/feature-card"; // fin
 @import "./components/workflow-card"; // fin
+@import "./components/review-card"; // fin
 @import "./components/loader";
 @import "./components/main-slider"; // fin
+@import "./components/developer"; // fin
 
 //
 // @import "./components/webp-bg";
 // @import "./components/includes-common";
 // @import "./components/tags";
 
-// @import "./components/offer-form";
+@import "./components/offer-form";
 // @import "./components/callback-form";
 
 // @import "./components/law-info";
@@ -32,9 +34,12 @@
 /* Секции */
 @import "./views/index-page/hero"; // fin
 @import "./views/index-page/features"; // fin
-@import "./views/index-page/workflow";
+@import "./views/index-page/about"; // fin
+@import "./views/index-page/workflow"; // fin
 @import "./views/index-page/portfolio"; // fin
 @import "./views/index-page/licenses"; // fin
+@import "./views/index-page/offer";
+@import "./views/index-page/contacts"; // fin
 
 // @import "./views/index-page/company";
 // @import "./views/index-page/portfolio";

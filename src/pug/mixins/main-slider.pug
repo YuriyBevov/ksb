@@ -1,5 +1,5 @@
 mixin main-slider(data)
-  .swiper.main-slider(class= data.cls ? data.cls : null data-fancybox-gallery= data.fancyboxGallery ? data.fancyboxGallery : null)
+  .swiper.main-slider(class= data.cls ? data.cls : null data-fancybox-gallery= data.fancyboxGallery ? data.fancyboxGallery : null data-max-slides-count = data.maxSlidesCount ? data.maxSlidesCount : null)
     .swiper-wrapper
       each slide in data.slides
         .swiper-slide.main-slider-slide

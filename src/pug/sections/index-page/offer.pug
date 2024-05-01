@@ -3,18 +3,11 @@ include ../../mixins/section-title
 section.offer#offer
   .lw-container
     .offer__container
-      .offer__side.offer__side--form-container
-        +section-title({
-          tag: 'h2',
-          title: 'Рассчитать <span>стоимость</span>'
-        })
+      +section-title({
+        tag: 'h2',
+        title: 'Заполните форму <br>и&nbsp;при&nbsp;необходимости прикрепите файл'
+      })
 
-        p.offer__desc Заполните форму, и&nbsp;мы свяжемся с&nbsp;Вами для&nbsp;уточнения деталей и&nbsp;расчета стоимости изделий.
-
-        include ../../components/offer-form
-
-      .offer__side.offer__side--image-bg
-        picture
-          source(type="image/webp" srcset="./assets/img/offer-img.webp 1x, ./assets/img/offer-img@2x.webp 2x")
-          img(loading="lazy" src="./assets/img/offer-img.jpg" srcset="./assets/img/offer-img@2x.jpg 2x" alt="Рассчитать стоимость" width="600" height="600")
-
+      .offer__grid
+        .offer__grid-section
+          include ../../components/offer-form

@@ -23,17 +23,11 @@
 
   &__nav {
     @extend .flex-centered-content;
-    // flex-grow: 1;
-    // margin: 0 40px;
 
     @include m-b-tablet-up {
       opacity: 0 !important;
       display: none !important;
     }
-
-    // .nav__list-item {
-    //   margin: 0 auto;
-    // }
 
     .nav {
       @include m-b-tablet-up {
@@ -43,20 +37,6 @@
       @include m-b-down(1280px) {
         max-width: 840px;
       }
-
-      &__list-item {
-        @extend .lw-nav-item-before-line;
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-
-    @include m-b-down(1280px) {
-      order: 2;
-      width: 100%;
-      margin: 0;
     }
 
     @include m-b-tablet-down {
@@ -71,8 +51,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100dvw;
         height: 100vh;
+        height: 100dvh;
         z-index: 100;
         background: rgba(35, 35, 35, 0.5);
         backdrop-filter: blur(2px);
@@ -81,15 +62,15 @@
           position: absolute;
           top: 0;
           right: 0;
-          width: 100vw;
+          width: 100dvw;
           height: 100%;
           max-width: 360px;
           background-color: var(--white);
           overflow: hidden;
           overflow-y: auto;
 
-          &__line {
-            display: none;
+          &__header {
+            display: flex;
           }
 
           &-closer {
@@ -101,21 +82,22 @@
             align-items: flex-start;
             margin: auto 0;
             padding: 50px 20px;
+            padding: 24px 20px;
             padding-bottom: 30px;
 
             &-item {
               margin: 0;
               margin-bottom: 5px;
-              padding-left: 12px;
 
-              &::before {
-                display: block;
-                top: 19px;
+              &--confidentiality {
+                display: none;
               }
 
               a {
                 font-size: 18px;
-                color: var(--text-color);
+                text-transform: uppercase;
+                padding-left: 0;
+                color: var(--primary);
 
                 &:hover {
                   color: var(--warning);
@@ -128,32 +110,10 @@
             }
           }
 
-          &__info,
-          &__footer {
-            @include m-b-tablet-down {
-              display: flex;
-            }
-          }
-
           &__info {
-            @include m-b-down(600px) {
-              margin-bottom: 0;
-            }
-          }
-
-          &__footer {
-            @include m-b-down(600px) {
-              padding: 30px 20px;
-              padding-bottom: 70px;
-            }
+            display: flex;
           }
         }
-      }
-    }
-
-    @media (max-height: 575px) {
-      .nav__footer {
-        display: none !important;
       }
     }
   }

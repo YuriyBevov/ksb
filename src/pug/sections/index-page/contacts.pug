@@ -1,20 +1,37 @@
 include ../../mixins/section-title
 
 section.contacts#contacts
-  .lw-container.contacts__container
-    .contacts__content
-      +section-title({
-        tag: 'h2',
-        title: 'Наши <span>контакты</span>'
-      })
+  .lw-container
+    +section-title({
+      tag: 'h2',
+      title: 'Наши контакты'
+    })
 
-      span.lw-title-xs Офис продаж:
-      include ../../includes/company-office-address
-      include ../../includes/company-mail
-      include ../../includes/company-phone
-      include ../../includes/company-worktime
+    .contacts__grid
+      .contacts__content
+        .contacts__content-item
+          svg(width="60" height="60")
+            use(xlink:href="./assets/sprite.svg#icon-phone")
+          a(href="tel:+78122100907").lw-main-text.lw-main-text--accent +7 (812) 210-09-07
 
-      span.lw-title-xs Производство - склад:
-      include ../../includes/company-manufacture-address
+        .contacts__content-item
+          svg(width="60" height="60")
+            use(xlink:href="./assets/sprite.svg#icon-mail")
+          a(href="mailto:mail@alum-doors.ru").lw-main-text.lw-main-text--accent mail@alum-doors.ru
 
-  #yMaps
+        .contacts__content-item
+          svg(width="60" height="60")
+            use(xlink:href="./assets/sprite.svg#icon-pin")
+
+          span.lw-main-text.lw-main-text--accent г. Санкт-Петербург, <br>улица Седова, <br>12 БЦ Т4
+
+        .contacts__content-item
+          svg(width="60" height="60")
+            use(xlink:href="./assets/sprite.svg#icon-calendar")
+
+          span.lw-main-text.lw-main-text--accent Пн - Чт: 9:00 - 18:00
+          span.lw-main-text.lw-main-text--accent Пт:9:00 - 17:00
+          span.lw-main-text.lw-main-text--accent Сб - Вс: Выходной
+
+      .contacts__map
+        #yMaps

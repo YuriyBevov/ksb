@@ -1,0 +1,12 @@
+mixin review-card(data)
+  .review-card
+    .review-card__header
+      span.lw-main-text.lw-main-text--accent!= data.title
+      small.lw-main-text!= data.desc
+
+    svg(width="40" height="40")
+      use(xlink:href="./assets/sprite.svg#icon-quotes")
+    .review-card__content
+      p.lw-main-text!= data.text
+
+    button(type="button").review-card__btn.lw-main-text.lw-main-text--accent Читать далее...

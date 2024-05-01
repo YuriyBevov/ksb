@@ -4,12 +4,17 @@ const sliders = document.querySelectorAll(".main-slider");
 
 if (sliders) {
   sliders.forEach((slider) => {
+    console.log(slider.dataset.maxSlides);
     const btnNext = slider
       .closest("section")
       .querySelector(".main-slider-button-next");
     const btnPrev = slider
       .closest("section")
       .querySelector(".main-slider-button-prev");
+
+    const maxSlidesCount = slider.dataset.maxSlidesCount;
+    const tabletSlidesCount = slider.dataset.tabletSlidesCount;
+    const mobileSlidesCount = slider.dataset.mobileSlidesCount;
 
     new Swiper(slider, {
       modules: [Navigation, Pagination],
@@ -25,23 +30,27 @@ if (sliders) {
 
       pagination: {
         el: ".main-slider-pagination",
-        // type: "fraction",
         dynamicBullets: true,
       },
 
       breakpoints: {
         480: {
-          slidesPerView: 2,
+          slidesPerView: mobileSlidesCount ? mobileSlidesCount : 2,
           spaceBetween: 20,
         },
 
         668: {
-          slidesPerView: 3,
+          slidesPerView: tabletSlidesCount ? tabletSlidesCount : 3,
           spaceBetween: 20,
         },
 
         960: {
-          slidesPerView: 4,
+          slidesPerView: maxSlidesCount ? maxSlidesCount : 4,
+          spaceBetween: 30,
+        },
+
+        1140: {
+          slidesPerView: maxSlidesCount ? maxSlidesCount : 5,
           spaceBetween: 30,
         },
       },

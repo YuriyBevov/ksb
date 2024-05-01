@@ -14,11 +14,13 @@
       <div class="lw-container header__container"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
         <div class="header__nav">
           <nav class="nav">
-            <button class="nav-closer" type="button" aria-label="Закрыть меню">
-              <svg width="20" height="20">
-                <use xlink:href="./assets/sprite.svg#icon-close"></use>
-              </svg>
-            </button>
+            <div class="nav__header"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+              <button class="nav-closer" type="button" aria-label="Закрыть меню">
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
             <ul class="nav__list">
               <li class="nav__list-item"><a class="anchor-link" href="#features">Наши преимущества</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#about">Область применения</a></li>
@@ -27,11 +29,11 @@
               <li class="nav__list-item"><a class="anchor-link" href="#licenses">Лицензии и Сертификаты</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#reviews">Что о нас говорят наши клиенты</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#contacts">Контакты</a></li>
+              <li class="nav__list-item nav__list-item--confidentiality"><a class="anchor-link" href="#" data-modal-anchor="law">Политика конфиденциальности</a></li>
             </ul>
             <div class="nav__info"><a class="company-phone" href="tel:+78122100907">+7 (812) 210-09-07</a>
-              <div class="company-worktime"><span>Пн - Пт: 9:00 - 18:00</span><span>Сб - Вс: Выходной</span></div>
+              <div class="company-worktime"><span>Пн - Чт: 9:00 - 18:00</span><span>Пт: 9:00 - 17:00</span><span>Сб - Вс: Выходной</span></div>
             </div>
-            <div class="nav__footer"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a></div>
           </nav>
         </div>
         <div class="header__phone"><a class="company-phone" href="tel:+78122100907">+7 (812) 210-09-07</a></div>
@@ -58,7 +60,7 @@
               <li><span>95 %</span><span class="lw-main-text">клиентов готовы нас рекомендовать</span></li>
               <li><span>2008</span><span class="lw-main-text">год основания компании</span></li>
             </ul>
-                  <button class="lw-main-btn js-callback-modal-opener" data-modal-anchor="callback" data-modal-title="Оставить заявку" data-modal-text="Заполните форму, и бязательно свяжемся с вами">Оставить заявку</button>
+                  <button class="lw-main-btn js-callback-modal-opener" data-modal-anchor="callback" data-modal-title="Оставить заявку" data-modal-text="Заполните форму, и мы обязательно свяжемся с вами">Оставить заявку</button>
           </div>
         </div>
       </section>
@@ -107,25 +109,41 @@
             <ul>
               <li>
                 <svg width="60" height="60">
-                  <use xlink:href="./assets/sprite.svg#icon-garantee"></use>
+                  <use xlink:href="./assets/sprite.svg#icon-success"></use>
                 </svg><span class="lw-main-text">Гарантия на изделия до 3 лет</span>
               </li>
               <li>
                 <svg width="60" height="60">
-                  <use xlink:href="./assets/sprite.svg#icon-contract"></use>
+                  <use xlink:href="./assets/sprite.svg#icon-success"></use>
                 </svg><span class="lw-main-text">Производство по ГОСТ</span>
               </li>
               <li>
                 <svg width="60" height="60">
-                  <use xlink:href="./assets/sprite.svg#icon-price"></use>
+                  <use xlink:href="./assets/sprite.svg#icon-success"></use>
                 </svg><span class="lw-main-text">Цена от производителя</span>
               </li>
               <li>
                 <svg width="60" height="60">
-                  <use xlink:href="./assets/sprite.svg#icon-repair"></use>
+                  <use xlink:href="./assets/sprite.svg#icon-success"></use>
                 </svg><span class="lw-main-text">Проффесиональный монтаж</span>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="lw-container">
+                <h2 class="lw-section-title">Область применения</h2>
+          <div class="about__grid">
+            <div class="about__grid-section">
+              <div class="about__content">
+                <p class="lw-main-text">Алюминиевые двери сочетаются с любым дизайном внешнего оформления и архитектуры здания и интерьером помещений. Они предлагают широкий выбор цветовых решений, от классических до современных, и могут быть выполнены в различных стилях, включая минимализм, хай-тек, прованс и др.</p>
+                <p class="lw-main-text">Благодаря своей прочности, алюминиевые двери также отлично подходят для обеспечения безопасности помещения. Алюминиевые двери легко ухаживать и имеют долгий срок службы, что делает их популярным выбором среди собственников недвижимости.</p>
+              </div>
+            </div>
+            <div class="about__grid-section">
+              <div class="about__side"><img src="./assets/img/objects/obj_1.jpg" title="Для офисных и торговых зданий" alt="Для офисных и торговых зданий" width="400" height="200"><img src="./assets/img/objects/obj_2.jpg" title="Для жилых зданий" alt="Для жилых зданий" width="400" height="200"><img src="./assets/img/objects/obj_3.jpg" title="Для промышленных зданий, производств и складских помещений" alt="Для промышленных зданий, производств и складских помещений" width="400" height="200"><img src="./assets/img/objects/obj_4.jpg" title="Для муниципальных зданий и социальных объектов" alt="Для муниципальных зданий и социальных объектов" width="400" height="200"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,7 +217,7 @@
       <section class="portfolio" id="portfolio">
         <div class="lw-container">
                 <h2 class="lw-section-title">Примеры <span>работ</span></h2>
-                <div class="swiper main-slider portfolio__slider" data-fancybox-gallery="portfolio">
+                <div class="swiper main-slider portfolio__slider" data-fancybox-gallery="portfolio" data-max-slides-count="4">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide main-slider-slide">
                       <picture>
@@ -213,22 +231,72 @@
                     </div>
                     <div class="swiper-slide main-slider-slide">
                       <picture>
-                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_1.webp 1x, ./assets/img/portfolio/portfolio_1@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_1.jpg" srcset="./assets/img/portfolio/portfolio_1@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_3.webp 1x, ./assets/img/portfolio/portfolio_3@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_3.jpg" srcset="./assets/img/portfolio/portfolio_3@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
                       </picture>
                     </div>
                     <div class="swiper-slide main-slider-slide">
                       <picture>
-                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_2.webp 1x, ./assets/img/portfolio/portfolio_2@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_2.jpg" srcset="./assets/img/portfolio/portfolio_2@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_4.webp 1x, ./assets/img/portfolio/portfolio_4@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_4.jpg" srcset="./assets/img/portfolio/portfolio_4@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
                       </picture>
                     </div>
                     <div class="swiper-slide main-slider-slide">
                       <picture>
-                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_1.webp 1x, ./assets/img/portfolio/portfolio_1@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_1.jpg" srcset="./assets/img/portfolio/portfolio_1@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_5.webp 1x, ./assets/img/portfolio/portfolio_5@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_5.jpg" srcset="./assets/img/portfolio/portfolio_5@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
                       </picture>
                     </div>
                     <div class="swiper-slide main-slider-slide">
                       <picture>
-                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_2.webp 1x, ./assets/img/portfolio/portfolio_2@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_2.jpg" srcset="./assets/img/portfolio/portfolio_2@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_6.webp 1x, ./assets/img/portfolio/portfolio_6@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_6.jpg" srcset="./assets/img/portfolio/portfolio_6@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_7.webp 1x, ./assets/img/portfolio/portfolio_7@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_7.jpg" srcset="./assets/img/portfolio/portfolio_7@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_8.webp 1x, ./assets/img/portfolio/portfolio_8@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_8.jpg" srcset="./assets/img/portfolio/portfolio_8@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_9.webp 1x, ./assets/img/portfolio/portfolio_9@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_9.jpg" srcset="./assets/img/portfolio/portfolio_9@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_10.webp 1x, ./assets/img/portfolio/portfolio_10@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_10.jpg" srcset="./assets/img/portfolio/portfolio_10@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_11.webp 1x, ./assets/img/portfolio/portfolio_11@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_11.jpg" srcset="./assets/img/portfolio/portfolio_11@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_12.webp 1x, ./assets/img/portfolio/portfolio_12@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_12.jpg" srcset="./assets/img/portfolio/portfolio_12@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_13.webp 1x, ./assets/img/portfolio/portfolio_13@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_13.jpg" srcset="./assets/img/portfolio/portfolio_13@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_14.webp 1x, ./assets/img/portfolio/portfolio_14@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_14.jpg" srcset="./assets/img/portfolio/portfolio_14@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_15.webp 1x, ./assets/img/portfolio/portfolio_15@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_15.jpg" srcset="./assets/img/portfolio/portfolio_15@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
+                      </picture>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/img/portfolio/portfolio_16.webp 1x, ./assets/img/portfolio/portfolio_16@2x.webp 2x"><img loading="lazy" src="./assets/img/portfolio/portfolio_16.jpg" srcset="./assets/img/portfolio/portfolio_16@2x.jpg 2x" alt="Лицензия" width="640" height="640" data-fancybox-item>
                       </picture>
                     </div>
                   </div>
@@ -253,7 +321,7 @@
       </section>
       <section class="licenses" id="licenses">
         <div class="lw-container">
-                <h2 class="lw-section-title">Лицензии и <span>сертификаты</span></h2>
+                <h2 class="lw-section-title">Лицензии и сертификаты</h2>
                 <div class="swiper main-slider licenses__slider" data-fancybox-gallery="licenses">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide main-slider-slide">
@@ -305,6 +373,211 @@
                 </div>
         </div>
       </section>
+      <section class="offer" id="offer">
+        <div class="lw-container">
+          <div class="offer__container">
+                  <h2 class="lw-section-title">Заполните форму <br>и&nbsp;при&nbsp;необходимости прикрепите файл</h2>
+            <div class="offer__grid">
+              <div class="offer__grid-section">
+                <form class="offer-form" action="mail.php" id="offer-form"><input type="hidden" name="Заполненная форма" value="Рассчитать стоимость" id="offer-form-title">
+                  <div class="offer-form__field">
+                                    <label for="user_name">Имя*</label>
+                                    <input class="lw-main-input" type="text" name="Имя" id="user_name" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                                    <label for="user_phone">Номер телефона*</label>
+                                    <input class="lw-main-input" type="tel" name="Телефон" id="user_phone" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                                    <label for="user_email">Электронная почта</label>
+                                    <input class="lw-main-input" type="text" name="E-mail" id="user_email">
+                  </div>
+                  <div class="offer-form__field">
+                    <label for="user_file">Прикрепить чертеж или тех. задание</label>
+                    <label class="file-attach-fake-control" for="user_file">
+                      <svg width="24" height="24">
+                        <use xlink:href="./assets/sprite.svg#icon-attach"></use>
+                      </svg><span>Прикрепить документ</span>
+                    </label>
+                    <input type="file" id="user_file" name="Файл">
+                  </div>
+                  <div class="offer-form__field">
+                    <label for="user_text">Ваш комментарий</label>
+                    <textarea id="user_text"></textarea>
+                  </div>
+                  <div class="offer-form__footer">
+                    <button class="lw-main-btn" type="submit">Рассчитать стоимость</button><small>Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.</small>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews" id="reviews">
+        <div class="lw-container">
+                <h2 class="lw-section-title">Что говорят о нас наши клиенты</h2>
+                <div class="swiper main-slider review__slider" data-max-slides-count="3" data-tablet-slides-count="2" data-mobile-slides-count="1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">Р.М. Сираканян</span><small class="lw-main-text">Первый заместитель директора Петербургского филиала ОАО «Ростелеком»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">ОАО Ростелеком выражает глубокую признательность и искреннюю благодарность за качественную и своевременную поставку противопожарных дверей в 2014г. Стабильные отгрузки и качественное исполнение работ позволили нам бесперебойно осуществлять свою деятельность. Выражаем уверенность в сохранении сложившихся дружественных отношений и надеемся на дальнейшее взаимовыгодное и плодотворное сотрудничество.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">С.Н. Турусов</span><small class="lw-main-text">Генеральный директор АО ВНИТИ ЭМ </small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">Выражаю благодарность за своевременное соблюдение сроков поставки и качественное изготовление противопожарных дверей, которые зарекомендовали в период эксплуатации только с хорошей стороны. Отлично поставлена обратная связь по согласованию и выставлению счетов и спецификации. Хочется отметить грамотный подход к демонтажу и монтажу дверей. Спасибо за профессионализм.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">А.И. Соловьев</span><small class="lw-main-text">Генеральный директор ООО «Стройцентр»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">С момента сотрудничества, ООО КСБ показало себя надежным партнером, вовремя и качественно выполняющим взятые на себя обязательства по обеспечению наших объектов противопожарными конструкциями.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">Р.М. Сираканян</span><small class="lw-main-text">Первый заместитель директора Петербургского филиала ОАО «Ростелеком»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">ОАО Ростелеком выражает глубокую признательность и искреннюю благодарность за качественную и своевременную поставку противопожарных дверей в 2014г. Стабильные отгрузки и качественное исполнение работ позволили нам бесперебойно осуществлять свою деятельность. Выражаем уверенность в сохранении сложившихся дружественных отношений и надеемся на дальнейшее взаимовыгодное и плодотворное сотрудничество.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">С.Н. Турусов</span><small class="lw-main-text">Генеральный директор АО ВНИТИ ЭМ </small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">Выражаю благодарность за своевременное соблюдение сроков поставки и качественное изготовление противопожарных дверей, которые зарекомендовали в период эксплуатации только с хорошей стороны. Отлично поставлена обратная связь по согласованию и выставлению счетов и спецификации. Хочется отметить грамотный подход к демонтажу и монтажу дверей. Спасибо за профессионализм.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">А.И. Соловьев</span><small class="lw-main-text">Генеральный директор ООО «Стройцентр»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">С момента сотрудничества, ООО КСБ показало себя надежным партнером, вовремя и качественно выполняющим взятые на себя обязательства по обеспечению наших объектов противопожарными конструкциями.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">Р.М. Сираканян</span><small class="lw-main-text">Первый заместитель директора Петербургского филиала ОАО «Ростелеком»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">ОАО Ростелеком выражает глубокую признательность и искреннюю благодарность за качественную и своевременную поставку противопожарных дверей в 2014г. Стабильные отгрузки и качественное исполнение работ позволили нам бесперебойно осуществлять свою деятельность. Выражаем уверенность в сохранении сложившихся дружественных отношений и надеемся на дальнейшее взаимовыгодное и плодотворное сотрудничество.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">С.Н. Турусов</span><small class="lw-main-text">Генеральный директор АО ВНИТИ ЭМ </small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">Выражаю благодарность за своевременное соблюдение сроков поставки и качественное изготовление противопожарных дверей, которые зарекомендовали в период эксплуатации только с хорошей стороны. Отлично поставлена обратная связь по согласованию и выставлению счетов и спецификации. Хочется отметить грамотный подход к демонтажу и монтажу дверей. Спасибо за профессионализм.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                    <div class="swiper-slide main-slider-slide">
+                            <div class="review-card">
+                              <div class="review-card__header"><span class="lw-main-text lw-main-text--accent">А.И. Соловьев</span><small class="lw-main-text">Генеральный директор ООО «Стройцентр»</small></div>
+                              <svg width="40" height="40">
+                                <use xlink:href="./assets/sprite.svg#icon-quotes"></use>
+                              </svg>
+                              <div class="review-card__content">
+                                <p class="lw-main-text">С момента сотрудничества, ООО КСБ показало себя надежным партнером, вовремя и качественно выполняющим взятые на себя обязательства по обеспечению наших объектов противопожарными конструкциями.</p>
+                              </div>
+                              <button class="review-card__btn lw-main-text lw-main-text--accent" type="button">Читать далее...</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div class="main-slider-controls">
+                    <div class="main-slider-pagination"></div>
+                    <div class="main-slider-navigation">
+                      <div class="main-slider-button-prev">
+                        <svg width="40" height="40">
+                          <use xlink:href="./assets/sprite.svg#icon-slider-arr"></use>
+                        </svg>
+                      </div>
+                      <div class="main-slider-button-next">
+                        <svg width="40" height="40">
+                          <use xlink:href="./assets/sprite.svg#icon-slider-arr"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="lw-container">
+                <h2 class="lw-section-title">Наши контакты</h2>
+          <div class="contacts__grid">
+            <div class="contacts__content">
+              <div class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+                </svg><a class="lw-main-text lw-main-text--accent" href="tel:+78122100907">+7 (812) 210-09-07</a>
+              </div>
+              <div class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+                </svg><a class="lw-main-text lw-main-text--accent" href="mailto:mail@alum-doors.ru">mail@alum-doors.ru</a>
+              </div>
+              <div class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="./assets/sprite.svg#icon-pin"></use>
+                </svg><span class="lw-main-text lw-main-text--accent">г. Санкт-Петербург, <br>улица Седова, <br>12 БЦ Т4</span>
+              </div>
+              <div class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="./assets/sprite.svg#icon-calendar"></use>
+                </svg><span class="lw-main-text lw-main-text--accent">Пн - Чт: 9:00 - 18:00</span><span class="lw-main-text lw-main-text--accent">Пт:9:00 - 17:00</span><span class="lw-main-text lw-main-text--accent">Сб - Вс: Выходной</span>
+              </div>
+            </div>
+            <div class="contacts__map">
+              <div id="yMaps"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="lw-container footer__container">
@@ -339,11 +612,13 @@
         </div>
         <div class="footer__field footer__field--nav footer__nav">
           <nav class="nav">
-            <button class="nav-closer" type="button" aria-label="Закрыть меню">
-              <svg width="20" height="20">
-                <use xlink:href="./assets/sprite.svg#icon-close"></use>
-              </svg>
-            </button>
+            <div class="nav__header"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+              <button class="nav-closer" type="button" aria-label="Закрыть меню">
+                <svg width="20" height="20">
+                  <use xlink:href="./assets/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
             <ul class="nav__list">
               <li class="nav__list-item"><a class="anchor-link" href="#features">Наши преимущества</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#about">Область применения</a></li>
@@ -352,29 +627,17 @@
               <li class="nav__list-item"><a class="anchor-link" href="#licenses">Лицензии и Сертификаты</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#reviews">Что о нас говорят наши клиенты</a></li>
               <li class="nav__list-item"><a class="anchor-link" href="#contacts">Контакты</a></li>
+              <li class="nav__list-item nav__list-item--confidentiality"><a class="anchor-link" href="#" data-modal-anchor="law">Политика конфиденциальности</a></li>
             </ul>
             <div class="nav__info"><a class="company-phone" href="tel:+78122100907">+7 (812) 210-09-07</a>
-              <div class="company-worktime"><span>Пн - Пт: 9:00 - 18:00</span><span>Сб - Вс: Выходной</span></div>
+              <div class="company-worktime"><span>Пн - Чт: 9:00 - 18:00</span><span>Пт: 9:00 - 17:00</span><span>Сб - Вс: Выходной</span></div>
             </div>
-            <div class="nav__footer"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a></div>
           </nav>
         </div>
-        <!--.footer__field.footer__field--contacts
-        .footer__contacts
-          span.footer__field-title Офис продаж:
-          include ../includes/company-office-address
-          include ../includes/company-mail
-          include ../includes/company-phone
-          include ../includes/company-worktime
-        
-          span.footer__field-title Производство-склад:
-          include ../includes/company-manufacture-address
-        
-        -->
       </div>
       <div class="footer-line" aria-hidden="true"></div>
       <div class="footer__bottom">
-        <div class="lw-container footer__bottom-container"><span class="company-rights">Copyright © ООО "Комплексные Системы Безопастности - изготовление противопожарных дверей"</span><a class="developer-link" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ"><img src="./assets/img/icon-developer.svg" width="168" height="44" alt="LittleWeb.ru - создание сайтов под ключ"></a></div>
+        <div class="lw-container footer__bottom-container"><span class="company-rights">Copyright © ООО "Комплексные Системы Безопастности - изготовление противопожарных дверей"</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-main-text">Создано в</span><img src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a></div>
       </div>
     </footer>
     <div class="modal callback-modal" id="callback">
@@ -390,9 +653,11 @@
           <div class="modal__body">
             <form class="callback-form" action="#" id="callback-form"><input type="hidden" name="Заполненная форма" value="Заказ звонка" id="callback-form-title">
               <div class="callback-form__field">
+                            <label for="callback_user_name"></label>
                             <input class="lw-main-input" type="text" name="Имя" placeholder="Имя*" id="callback_user_name" data-required>
               </div>
               <div class="callback-form__field">
+                            <label for="callback_user_phone"></label>
                             <input class="lw-main-input" type="tel" name="Телефон" placeholder="Телефон*" id="callback_user_phone" data-required>
               </div>
               <div class="callback-form__footer">

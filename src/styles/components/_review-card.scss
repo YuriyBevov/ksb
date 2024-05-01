@@ -1,0 +1,44 @@
+.review-card {
+  @extend .lw-info-card;
+  @extend .flex-column;
+
+  &__header {
+    @extend .flex-column;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    .lw-main-text--accent {
+      text-transform: initial;
+    }
+
+    small {
+      font-size: 90%;
+    }
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+    @include text-truncate(5);
+    & > * {
+      color: var(--dark);
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__btn {
+    @extend .btn-reset;
+    text-transform: initial;
+    margin-top: auto;
+    width: fit-content;
+    padding: 10px 0;
+  }
+}
