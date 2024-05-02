@@ -27,29 +27,17 @@
   fill: var(--svg-fill-color);
 }
 
-// .footer-line {
-//   position: relative;
-
-//   &::before {
-//     position: absolute;
-//     top: 0;
-//     left: var(--container-offset);
-//     width: calc(100% - (var(--container-offset) * 2));
-//     height: 1px;
-//     content: "";
-//     background-color: var(--primary);
-//   }
-// }
-
 /*scroll*/
 .main-scroll {
   &::-webkit-scrollbar {
     background-color: var(--main-scrollbar-color);
     width: var(--main-scrollbar-width);
+    border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--main-scrollbar-thumb-color);
+    border-radius: 10px;
   }
 }
 
