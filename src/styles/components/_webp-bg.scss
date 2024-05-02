@@ -1,31 +1,31 @@
-.webp .hero__underlay-bg {
-  background-image: url("../assets/img/hero-bg.webp");
+.webp .hero {
+  background-image: url("../assets/img/hero-bg@1x.webp");
 
-  @media (min-resolution: var(--retina-dppx) ) and (min-resolution: (--retina-dpi) ) {
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: (--retina-dpi)) {
     background-image: url("../assets/img/hero-bg2x.webp");
   }
 }
 
-.no-webp .hero__underlay-bg {
-  background-image: url("../assets/img/hero-bg.png");
+.no-webp .hero {
+  background-image: url("../assets/img/hero-bg@1x.png");
 
-  @media (min-resolution: var(--retina-dppx) ) and (min-resolution: var(--retina-dpi) ) {
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: var(--retina-dpi)) {
     background-image: url("../assets/img/hero-bg2x.png");
   }
 }
 
-.webp .offer {
-  background-image: url("../assets/img/offer-bg.webp");
+.webp .offer .offer__container {
+  background-image: url("../assets/img/offer-img.webp");
 
-  @media (min-resolution: var(--retina-dppx) ) and (min-resolution: (--retina-dpi) ) {
-    background-image: url("../assets/img/offer-bg2x.webp");
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: (--retina-dpi)) {
+    background-image: url("../assets/img/offer-img@2x.webp");
   }
 }
 
-.no-webp .offer {
-  background-image: url("../assets/img/offer-bg.png");
+.no-webp .offer .offer__container {
+  background-image: url("../assets/img/offer-img.png");
 
-  @media (min-resolution: var(--retina-dppx) ) and (min-resolution: var(--retina-dpi) ) {
-    background-image: url("../assets/img/offer-bg2x.png");
+  @media (min-resolution: var(--retina-dppx)) and (min-resolution: var(--retina-dpi)) {
+    background-image: url("../assets/img/offer-img@2x.png");
   }
 }

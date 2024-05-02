@@ -31,7 +31,9 @@ section.features#features
         })
 
     .features__bottom
-      img(src="./assets/img/lw-feature-image.png" alt="Монтажник" width="800" height="600")
+      picture
+        source(type="image/webp" srcset="./assets/img/lw-feature-image.webp 1x, ./assets/img/lw-feature-image@2x.webp 2x")
+        img(loading="lazy" src="./assets/img/lw-feature-image.png" srcset="./assets/img/lw-feature-image.png 2x" alt="Монтажник" width="800" height="600")
 
       ul
         li

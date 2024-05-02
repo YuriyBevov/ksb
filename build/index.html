@@ -5,16 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Алюминиевые двери на заказ</title><meta name="description" content="Алюминиевые двери на заказ">
 <meta name="keywords" content="">
+<link rel="preload" as="image" href="../assets/img/hero-bg@1x.png" imagesrcset="../assets/img/hero-bg@1x.webp, ../assets/img/hero-bg@2x.png 2x, ../assets/img/hero-bg@2x.webp 2x" />
 <link rel="stylesheet" href="./assets/main.css">
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
     <div class="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
     <header class="header">
-      <div class="lw-container header__container"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+      <div class="lw-container header__container"><a class="company-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
         <div class="header__nav">
           <nav class="nav">
-            <div class="nav__header"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+            <div class="nav__header"><a class="company-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
               <button class="nav-closer" type="button" aria-label="Закрыть меню">
                 <svg width="20" height="20">
                   <use xlink:href="./assets/sprite.svg#icon-close"></use>
@@ -50,7 +51,7 @@
       </div>
     </header>
     <main>
-      <section class="hero" id="hero">
+      <section class="hero" id="hero" loading="eager">
         <div class="lw-container hero__container">
           <div class="hero__content">
             <h1 class="lw-main-title">Алюминиевые двери на&nbsp;заказ</h1>
@@ -105,7 +106,10 @@
                     </div>
             </li>
           </ul>
-          <div class="features__bottom"><img src="./assets/img/lw-feature-image.png" alt="Монтажник" width="800" height="600">
+          <div class="features__bottom">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/lw-feature-image.webp 1x, ./assets/img/lw-feature-image@2x.webp 2x"><img loading="lazy" src="./assets/img/lw-feature-image.png" srcset="./assets/img/lw-feature-image.png 2x" alt="Монтажник" width="800" height="600">
+            </picture>
             <ul>
               <li>
                 <svg width="60" height="60">
@@ -142,7 +146,20 @@
               </div>
             </div>
             <div class="about__grid-section">
-              <div class="about__side"><img src="./assets/img/objects/obj_1.jpg" title="Для офисных и торговых зданий" alt="Для офисных и торговых зданий" width="400" height="200"><img src="./assets/img/objects/obj_2.jpg" title="Для жилых зданий" alt="Для жилых зданий" width="400" height="200"><img src="./assets/img/objects/obj_3.jpg" title="Для промышленных зданий, производств и складских помещений" alt="Для промышленных зданий, производств и складских помещений" width="400" height="200"><img src="./assets/img/objects/obj_4.jpg" title="Для муниципальных зданий и социальных объектов" alt="Для муниципальных зданий и социальных объектов" width="400" height="200"></div>
+              <div class="about__side">
+                <picture>
+                  <source type="image/webp" srcset="./assets/img/objects/obj_1.webp 1x, ./assets/img/objects/obj_1@2x.webp 2x"><img loading="lazy" src="./assets/img/objects/obj_1.jpg" srcset="./assets/img/objects/obj_1@2x.jpg 2x" title="Для офисных и торговых зданий" alt="Для офисных и торговых зданий" width="400" height="200">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="./assets/img/objects/obj_2.webp 1x, ./assets/img/objects/obj_2@2x.webp 2x"><img loading="lazy" src="./assets/img/objects/obj_2.jpg" srcset="./assets/img/objects/obj_2@2x.jpg 2x" title="Для жилых зданий" alt="Для жилых зданий" width="400" height="200">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="./assets/img/objects/obj_3.webp 1x, ./assets/img/objects/obj_3@2x.webp 2x"><img loading="lazy" src="./assets/img/objects/obj_3.jpg" srcset="./assets/img/objects/obj_3@2x.jpg 2x" title="Для промышленных зданий, производств и складских помещений" alt="Для промышленных зданий, производств и складских помещений" width="400" height="200">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="./assets/img/objects/obj_4.webp 1x, ./assets/img/objects/obj_4@2x.webp 2x"><img loading="lazy" src="./assets/img/objects/obj_4.jpg" srcset="./assets/img/objects/obj_4@2x.jpg 2x" title="Для муниципальных зданий и социальных объектов" alt="Для муниципальных зданий и социальных объектов" width="400" height="200">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -582,7 +599,7 @@
     <footer class="footer">
       <div class="lw-container footer__container">
         <div class="footer-line" aria-hidden="true"></div>
-        <div class="footer__top"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+        <div class="footer__top"><a class="company-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
           <div class="footer__top-phone"><a class="company-phone" href="tel:+78122100907">
               <svg width="20" height="20">
                 <use xlink:href="./assets/sprite.svg#icon-phone"></use>
@@ -612,7 +629,7 @@
         </div>
         <div class="footer__field footer__field--nav footer__nav">
           <nav class="nav">
-            <div class="nav__header"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
+            <div class="nav__header"><a class="company-logo" href="index.html"><img loading="lazy" src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
               <button class="nav-closer" type="button" aria-label="Закрыть меню">
                 <svg width="20" height="20">
                   <use xlink:href="./assets/sprite.svg#icon-close"></use>
@@ -637,7 +654,7 @@
       </div>
       <div class="footer-line" aria-hidden="true"></div>
       <div class="footer__bottom">
-        <div class="lw-container footer__bottom-container"><span class="company-rights">Copyright © ООО "Комплексные Системы Безопастности - изготовление противопожарных дверей"</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-main-text">Создано в</span><img src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a></div>
+        <div class="lw-container footer__bottom-container"><span class="company-rights">Copyright © ООО "Комплексные Системы Безопастности - изготовление противопожарных дверей"</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-main-text">Создано в</span><img loading="lazy" src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a></div>
       </div>
     </footer>
     <div class="modal main-modal" id="callback">

@@ -14,8 +14,18 @@ section.about#about
           p.lw-main-text Благодаря своей прочности, алюминиевые двери также отлично подходят для обеспечения безопасности помещения. Алюминиевые двери легко ухаживать и имеют долгий срок службы, что делает их популярным выбором среди собственников недвижимости.
       .about__grid-section
         .about__side
-          img(src="./assets/img/objects/obj_1.jpg" title="Для офисных и торговых зданий" alt="Для офисных и торговых зданий" width="400" height="200")
-          img(src="./assets/img/objects/obj_2.jpg" title="Для жилых зданий" alt="Для жилых зданий" width="400" height="200")
-          img(src="./assets/img/objects/obj_3.jpg" title="Для промышленных зданий, производств и складских помещений" alt="Для промышленных зданий, производств и складских помещений" width="400" height="200")
-          img(src="./assets/img/objects/obj_4.jpg" title="Для муниципальных зданий и социальных объектов" alt="Для муниципальных зданий и социальных объектов" width="400" height="200")
+          picture
+            source(type="image/webp" srcset="./assets/img/objects/obj_1.webp 1x, ./assets/img/objects/obj_1@2x.webp 2x")
+            img(loading="lazy" src="./assets/img/objects/obj_1.jpg" srcset="./assets/img/objects/obj_1@2x.jpg 2x" title="Для офисных и торговых зданий" alt="Для офисных и торговых зданий" width="400" height="200")
 
+          picture
+            source(type="image/webp" srcset="./assets/img/objects/obj_2.webp 1x, ./assets/img/objects/obj_2@2x.webp 2x")
+            img(loading="lazy" src="./assets/img/objects/obj_2.jpg" srcset="./assets/img/objects/obj_2@2x.jpg 2x" title="Для жилых зданий" alt="Для жилых зданий" width="400" height="200")
+
+          picture
+            source(type="image/webp" srcset="./assets/img/objects/obj_3.webp 1x, ./assets/img/objects/obj_3@2x.webp 2x")
+            img(loading="lazy" src="./assets/img/objects/obj_3.jpg" srcset="./assets/img/objects/obj_3@2x.jpg 2x" title="Для промышленных зданий, производств и складских помещений" alt="Для промышленных зданий, производств и складских помещений" width="400" height="200")
+
+          picture
+            source(type="image/webp" srcset="./assets/img/objects/obj_4.webp 1x, ./assets/img/objects/obj_4@2x.webp 2x")
+            img(loading="lazy" src="./assets/img/objects/obj_4.jpg" srcset="./assets/img/objects/obj_4@2x.jpg 2x" title="Для муниципальных зданий и социальных объектов" alt="Для муниципальных зданий и социальных объектов" width="400" height="200")
