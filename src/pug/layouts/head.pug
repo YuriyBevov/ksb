@@ -6,7 +6,11 @@ mixin head(title, desc, keywords)
     title!= title
     <meta name="description" content="Алюминиевые двери на заказ">
     <meta name="keywords" content="">
-    <link rel="preload" as="image" href="../assets/img/hero-bg@1x.png" imagesrcset="../assets/img/hero-bg@1x.webp, ../assets/img/hero-bg@2x.png 2x, ../assets/img/hero-bg@2x.webp 2x" />
+    <link rel="preload" fetchpriority="high" as="image" href="./assets/img/hero-bg@1x.png" imagesrcset="./assets/img/hero-bg@1x.webp, ./assets/img/hero-bg@2x.png 2x, ./assets/img/hero-bg@2x.webp 2x" />
+
+    <link rel="preload" href="./assets/fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./assets/main.css">
 
     script(defer src="./assets/bundle.js")
