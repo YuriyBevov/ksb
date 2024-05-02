@@ -9,7 +9,7 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <div class="loader"><div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+    <div class="loader"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
     <header class="header">
       <div class="lw-container header__container"><a class="company-logo" href="index.html"><img src="./assets/img/icon-logo.svg" alt="Завод металлических дверей" width="218" height="50"></a>
         <div class="header__nav">
@@ -37,7 +37,7 @@
           </nav>
         </div>
         <div class="header__phone"><a class="company-phone" href="tel:+78122100907">+7 (812) 210-09-07</a></div>
-        <button class="lw-main-btn header__callback-btn js-callback-modal-opener" type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback" data-modal-title="Заказать звонок" data-modal-text="Заполните форму, и мы перезвоним Вам">
+        <button class="lw-main-btn header__callback-btn js-callback-modal-opener" type="button" aria-label="Заказать обратный звонок" data-modal-anchor="callback">
           <svg width="20" height="20">
             <use xlink:href="./assets/sprite.svg#icon-phone"></use>
           </svg><span>Заказать звонок</span>
@@ -60,7 +60,7 @@
               <li><span>95 %</span><span class="lw-main-text">клиентов готовы нас рекомендовать</span></li>
               <li><span>2008</span><span class="lw-main-text">год основания компании</span></li>
             </ul>
-                  <button class="lw-main-btn js-callback-modal-opener" data-modal-anchor="callback" data-modal-title="Оставить заявку" data-modal-text="Заполните форму, и мы обязательно свяжемся с вами">Оставить заявку</button>
+                  <button class="lw-main-btn js-callback-modal-opener" data-modal-anchor="offer">Оставить заявку</button>
           </div>
         </div>
       </section>
@@ -316,7 +316,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="lw-main-btn js-callback-modal-opener portfolio__btn" data-modal-anchor="callback" data-modal-title="Оставить заявку" data-modal-text="Заполните форму, и бязательно свяжемся с вами">Вызвать замерщика на объект</button>
+                <button class="lw-main-btn js-callback-modal-opener portfolio__btn" data-modal-anchor="employee">Вызвать замерщика на объект</button>
         </div>
       </section>
       <section class="licenses" id="licenses">
@@ -587,7 +587,7 @@
               <svg width="20" height="20">
                 <use xlink:href="./assets/sprite.svg#icon-phone"></use>
               </svg><span>+7 (812) 210-09-07</span></a></div>
-          <button class="lw-main-btn footer__offer-btn js-callback-modal-opener" type="button" aria-label="Заказать проект" data-modal-anchor="callback" data-modal-title="Заказать звонок" data-modal-text="Заполните форму, и мы перезвоним Вам">
+          <button class="lw-main-btn footer__offer-btn" type="button" aria-label="Заказать проект" data-modal-anchor="offer">
             <svg width="20" height="20">
               <use xlink:href="./assets/sprite.svg#icon-phone"></use>
             </svg><span>Заказать проект</span>
@@ -640,7 +640,7 @@
         <div class="lw-container footer__bottom-container"><span class="company-rights">Copyright © ООО "Комплексные Системы Безопастности - изготовление противопожарных дверей"</span><a class="developer" href="https://littleweb.ru/" rel="noopener nofollow norefferer" aria-label="LittleWeb.ru - создание сайтов под ключ" target="_blank"><span class="lw-main-text">Создано в</span><img src="./assets/img/icon-developer.svg" width="280" height="40" alt="LittleWeb.ru - создание сайтов под ключ"></a></div>
       </div>
     </footer>
-    <div class="modal callback-modal" id="callback">
+    <div class="modal main-modal" id="callback">
       <div class="modal__overlay">
         <div class="modal__content">
           <div class="modal__header">
@@ -648,22 +648,110 @@
               <svg width="18" height="18">
                 <use xlink:href="./assets/sprite.svg#icon-close"></use>
               </svg>
-            </button><span class="lw-section-title">Заказать <span>звонок</span></span><span class="modal__header-text">Заполните форму, и мы перезвоним Вам</span>
+            </button><span class="lw-section-title">Заполните форму и мы обязательно свяжемся с вами</span></span>
           </div>
           <div class="modal__body">
-            <form class="callback-form" action="#" id="callback-form"><input type="hidden" name="Заполненная форма" value="Заказ звонка" id="callback-form-title">
-              <div class="callback-form__field">
-                            <label for="callback_user_name"></label>
-                            <input class="lw-main-input" type="text" name="Имя" placeholder="Имя*" id="callback_user_name" data-required>
-              </div>
-              <div class="callback-form__field">
-                            <label for="callback_user_phone"></label>
-                            <input class="lw-main-input" type="tel" name="Телефон" placeholder="Телефон*" id="callback_user_phone" data-required>
-              </div>
-              <div class="callback-form__footer">
-                <button class="lw-main-btn" type="submit">Заказать звонок</button><small>Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.</small>
-              </div>
-            </form>
+                <form class="offer-form" action="#" id="offer-form">
+                  <input type="hidden" name="Заполненная форма" value="Заказ звонка">
+                  <div class="offer-form__field">
+                        <label for="callback_user_name">Имя*</label>
+                        <input class="lw-main-input" type="text" name="Имя" id="callback_user_name" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="callback_user_phone">Телефон*</label>
+                        <input class="lw-main-input" type="tel" name="Телефон" id="callback_user_phone" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                    <label for="callback_text">Комментарий</label>
+                    <textarea id="callback_text"></textarea>
+                  </div>
+                  <div class="offer-form__footer">
+                    <button class="lw-main-btn" type="submit">Заказать звонок</button><small>Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.</small>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal main-modal" id="offer">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__header">
+            <button class="modal-closer" type="button" aria-label="Закрыть">
+              <svg width="18" height="18">
+                <use xlink:href="./assets/sprite.svg#icon-close"></use>
+              </svg>
+            </button><span class="lw-section-title">Заполните форму и мы обязательно свяжемся с вами</span></span>
+          </div>
+          <div class="modal__body">
+                <form class="offer-form" action="#" id="offer-form">
+                  <input type="hidden" name="Заполненная форма" value="Рассчитать стоимость">
+                  <div class="offer-form__field">
+                        <label for="offer_user_name">Имя*</label>
+                        <input class="lw-main-input" type="text" name="Имя" id="offer_user_name" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="offer_user_phone">Телефон*</label>
+                        <input class="lw-main-input" type="tel" name="Телефон" id="offer_user_phone" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="offer_user_mail">Электронная почта*</label>
+                        <input class="lw-main-input" type="text" name="Электронная почта" id="offer_user_mail" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                    <label for="offer_constr_count">Прикрепить чертеж или тех. задание</label>
+                    <label class="file-attach-fake-control" for="offer_constr_count">
+                      <svg width="24" height="24">
+                        <use xlink:href="./assets/sprite.svg#icon-attach"></use>
+                      </svg><span>Прикрепить чертеж или тех. задание</span>
+                    </label>
+                    <input type="file" id="offer_constr_count" name="Файл">
+                  </div>
+                  <div class="offer-form__field">
+                    <label for="offer_user_text">Комментарий</label>
+                    <textarea id="offer_user_text"></textarea>
+                  </div>
+                  <div class="offer-form__footer">
+                    <button class="lw-main-btn" type="submit">Оставить заявку</button><small>Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.</small>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal main-modal" id="employee">
+      <div class="modal__overlay">
+        <div class="modal__content">
+          <div class="modal__header">
+            <button class="modal-closer" type="button" aria-label="Закрыть">
+              <svg width="18" height="18">
+                <use xlink:href="./assets/sprite.svg#icon-close"></use>
+              </svg>
+            </button><span class="lw-section-title">Заполните форму и мы обязательно свяжемся с вами</span></span>
+          </div>
+          <div class="modal__body">
+                <form class="offer-form" action="#" id="offer-form">
+                  <input type="hidden" name="Заполненная форма" value="Вызов замерщика на объект">
+                  <div class="offer-form__field">
+                        <label for="empl_user_name">Имя*</label>
+                        <input class="lw-main-input" type="text" name="Имя" id="empl_user_name" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="empl_user_phone">Телефон*</label>
+                        <input class="lw-main-input" type="tel" name="Телефон" id="empl_user_phone" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="empl_constr_count">Количество конструкций*</label>
+                        <input class="lw-main-input" type="text" name="Количество конструкций" id="empl_constr_count" data-required>
+                  </div>
+                  <div class="offer-form__field">
+                        <label for="empl_user_address">Адрес объекта*</label>
+                        <input class="lw-main-input" type="text" name="Адрес объекта" id="empl_user_address" data-required>
+                  </div>
+                  <div class="offer-form__footer">
+                    <button class="lw-main-btn" type="submit">Вызвать замерщика</button><small>Нажимая на кнопку вы соглашаетесь с&nbsp;<a href="#" data-modal-anchor="law">обработкой персональных</a> данных.</small>
+                  </div>
+                </form>
           </div>
         </div>
       </div>
@@ -681,9 +769,8 @@
               <div class="modal__body">
                 <svg width="48" height="48">
                   <use xlink:href="./assets/sprite.svg#icon-success"></use>
-                </svg><span class="lw-section-title">Ваша заявка успешно отправлена!</span>
+                </svg><span class="lw-section-title">Вы успешно отправили заявку, мы свяжемся в вами в ближайшее время!</span>
               </div>
-              <div class="modal__footer"><span>В ближайшее время мы перезвоним Вам!</span></div>
             </div>
           </div>
         </div>
@@ -700,21 +787,20 @@
               <div class="modal__body">
                 <svg width="48" height="48">
                   <use xlink:href="./assets/sprite.svg#icon-error"></use>
-                </svg><span class="lw-section-title">Ошибка отправки!</span>
+                </svg><span class="lw-section-title">Что-то пошло не так, попробуйте отправить заявку снова.</span>
               </div>
-              <div class="modal__footer"><span>К сожалению, что-то пошло не так... Попробуйте снова!</span></div>
             </div>
           </div>
         </div>
     <div class="modal law-modal" id="law" aria-hidden="true">
       <div class="modal__overlay">
         <div class="modal__content">
-          <div class="modal__header">
+          <div class="modal__header"><span class="law-modal__title">Политика компании в&nbsp;отношении обработки персональных данных </span></span>
             <button class="modal-closer" type="button" aria-label="Закрыть">
               <svg width="18" height="18">
                 <use xlink:href="./assets/sprite.svg#icon-close"></use>
               </svg>
-            </button><span class="law-modal__title">Политика компании в&nbsp;отношении обработки персональных данных </span></span>
+            </button>
           </div>
           <div class="modal__body"></div>
           <div class="law-info">

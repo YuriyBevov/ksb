@@ -2,7 +2,6 @@
   &__title {
     display: block;
     font-size: 18px;
-    padding-right: 60px;
   }
   .modal__content {
     padding-top: 0;
@@ -16,9 +15,13 @@
     top: 0;
     padding: 20px 0;
     background-color: var(--white);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .modal-closer {
-    right: 0;
+    position: static;
+    margin-left: auto;
   }
 }

@@ -1,30 +1,37 @@
 import { Modal } from "../classes/Modal";
 
 export function sendForm(form) {
-  const loader = document.querySelector('.loader');
-  const successModal = document.querySelector('.success-modal');
-  const errorModal = document.querySelector('.error-modal');
+  const loader = document.querySelector(".loader");
+  const successModal = document.querySelector(".success-modal");
+  const errorModal = document.querySelector(".error-modal");
 
-  loader.classList.add('active');
+  loader.classList.add("active");
 
   function hideLoader() {
-    loader.classList.remove('active');
+    loader.classList.remove("active");
   }
 
   function success() {
     hideLoader();
     form.reset();
-    new Modal(successModal).show();
 
-    if(dataLayer) {
-      dataLayer.push({'event': 'form-submit-event'});
-    }
+    const currentModal = form.closest(".modal");
+
+    new Modal(currentModal).refresh();
+
+    setTimeout(() => {
+      new Modal(successModal).show();
+    }, 700);
+
+    // if (dataLayer) {
+    //   dataLayer.push({ event: "form-submit-event" });
+    // }
   }
 
   function error() {
     hideLoader();
     new Modal(errorModal, {
-      preventBodyLock: true
+      preventBodyLock: true,
     }).show();
   }
 
@@ -37,7 +44,7 @@ export function sendForm(form) {
     const xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         success(xhr.response, xhr.responseType);
@@ -46,7 +53,5 @@ export function sendForm(form) {
       }
     };
     xhr.send(data);
-  };
+  }
 }
-
-

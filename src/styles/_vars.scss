@@ -21,6 +21,8 @@
   --light: #f2f7fd;
   --gray: #8d8d8d;
   --dark: #505050;
+  --success: #21bf73;
+  --danger: #f32f2f;
 
   --svg-fill-color: var(--secondary);
   --main-bg-color: var(--light);
@@ -38,14 +40,4 @@
 
   --main-transition: 0.25s 0.05s ease-in;
   --fast-transition: 0.1s ease-in;
-
-  //
-  // --warning: #d1be99;
-  // --danger: #f09926;
-
-  // --dark: #505050;
-  // --darkness: #171717;
-  // --text-color: var(--dark);
-  --success: #21bf73;
-  --error: #ff3030;
 }

@@ -11,6 +11,3 @@ mixin state-modal(data)
           svg(width="48" height="48")
             use(xlink:href=`./assets/sprite.svg#icon-${data.icon}`)
           span.lw-section-title!= data.title
-
-        .modal__footer
-          span!= data.text

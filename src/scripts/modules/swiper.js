@@ -4,7 +4,6 @@ const sliders = document.querySelectorAll(".main-slider");
 
 if (sliders) {
   sliders.forEach((slider) => {
-    console.log(slider.dataset.maxSlides);
     const btnNext = slider
       .closest("section")
       .querySelector(".main-slider-button-next");
