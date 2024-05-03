@@ -25,7 +25,7 @@
 
   &__content {
     margin-bottom: 20px;
-    @include text-truncate(5);
+    // @include text-truncate(5);
     & > * {
       color: var(--dark);
     }
@@ -40,5 +40,6 @@
     margin-top: auto;
     width: fit-content;
     padding: 10px 0;
+    display: none;
   }
 }

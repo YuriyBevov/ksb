@@ -7,6 +7,6 @@ mixin review-card(data)
     svg(width="40" height="40")
       use(xlink:href="./assets/sprite.svg#icon-quotes")
     .review-card__content
-      p.lw-main-text!= data.text
+      p.lw-main-text.review-card__text!= data.text
 
-    button(type="button").review-card__btn.lw-main-text.lw-main-text--accent Читать далее...
+    button(type="button" data-modal-anchor="review-modal" data-review-text= data.text).review-card__btn.lw-main-text.lw-main-text--accent Читать далее...
