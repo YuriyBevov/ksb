@@ -1,4 +1,6 @@
 import { gsap } from "gsap";
+import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin);
 import { bodyLocker } from "../utils/bodyLocker";
 import { focusTrap } from "../utils/focusTrap";
 
@@ -45,6 +47,7 @@ if(opener) {
   }
 
   const closeNavHandler = () => {
+    bodyLocker(false);
     tl.reverse();
 
     setTimeout(() => {
@@ -52,7 +55,7 @@ if(opener) {
       closer.removeEventListener('click', closeNavHandler);
       nav.removeEventListener('click', onOverlayClickHandler);
       document.removeEventListener('keydown', onEscClickHandler);
-      bodyLocker(false);
+
     }, 650);
   }
 
@@ -71,4 +74,25 @@ if(opener) {
   opener.addEventListener('click', openNavHandler);
 
   window.addEventListener('resize', closeNavHandler);
+
+  const anchors = document.querySelectorAll('.nav-anchor-link');
+
+  if(anchors) {
+    const onClickScrollToAnchor = (evt) => {
+      evt.preventDefault();
+      const anchor = evt.currentTarget.getAttribute('href');
+      const headerOffset = document.querySelector('.header').getBoundingClientRect().height;
+      const target = document.querySelector(anchor);
+      const offset = target.offsetTop - headerOffset;
+      closeNavHandler();
+
+      setTimeout(() => {
+        gsap.to(window, {duration: 1, scrollTo: {y: offset, autoKill: true}, ease: 'ease-in'});
+      },400);
+    }
+
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', onClickScrollToAnchor);
+    });
+  }
 }

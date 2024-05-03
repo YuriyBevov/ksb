@@ -3,7 +3,7 @@ import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const anchors = document.querySelectorAll('.anchor-link');
+const anchors = document.querySelectorAll('.footer-anchor-link');
 
 if(anchors) {
   const onClickScrollToAnchor = (evt) => {

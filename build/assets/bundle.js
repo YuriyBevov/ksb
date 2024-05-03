@@ -216,7 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
-const anchors = document.querySelectorAll('.anchor-link');
+const anchors = document.querySelectorAll('.footer-anchor-link');
 if (anchors) {
   const onClickScrollToAnchor = evt => {
     evt.preventDefault();
@@ -595,17 +595,20 @@ Modernizr.on('webp', function () {});
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var _utils_bodyLocker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/bodyLocker */ "./src/scripts/utils/bodyLocker.js");
-/* harmony import */ var _utils_focusTrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/focusTrap */ "./src/scripts/utils/focusTrap.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var _utils_bodyLocker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/bodyLocker */ "./src/scripts/utils/bodyLocker.js");
+/* harmony import */ var _utils_focusTrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/focusTrap */ "./src/scripts/utils/focusTrap.js");
 
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
 
 
 const opener = document.querySelector('.burger');
 if (opener) {
   const nav = document.querySelector('.header__nav');
   const closer = document.querySelector('.nav-closer');
-  const tl = gsap__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline().pause();
+  const tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline().pause();
   tl.fromTo(nav, {
     display: 'none',
     opacity: 0
@@ -616,7 +619,7 @@ if (opener) {
     duration: .4,
     ease: 'ease-in',
     onComplete: () => {
-      (0,_utils_focusTrap__WEBPACK_IMPORTED_MODULE_1__.focusTrap)(nav);
+      (0,_utils_focusTrap__WEBPACK_IMPORTED_MODULE_3__.focusTrap)(nav);
     }
   }).fromTo('.header .nav', {
     x: '100vw'
@@ -625,7 +628,7 @@ if (opener) {
     duration: .3,
     ease: 'ease-in',
     onComplete: () => {
-      (0,_utils_bodyLocker__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
+      (0,_utils_bodyLocker__WEBPACK_IMPORTED_MODULE_2__.bodyLocker)(true);
     }
   }, "-=0.3");
   const openNavHandler = () => {
@@ -638,13 +641,13 @@ if (opener) {
     }, 650);
   };
   const closeNavHandler = () => {
+    (0,_utils_bodyLocker__WEBPACK_IMPORTED_MODULE_2__.bodyLocker)(false);
     tl.reverse();
     setTimeout(() => {
       opener.addEventListener('click', openNavHandler);
       closer.removeEventListener('click', closeNavHandler);
       nav.removeEventListener('click', onOverlayClickHandler);
       document.removeEventListener('keydown', onEscClickHandler);
-      (0,_utils_bodyLocker__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
     }, 650);
   };
   const onOverlayClickHandler = evt => {
@@ -659,6 +662,30 @@ if (opener) {
   };
   opener.addEventListener('click', openNavHandler);
   window.addEventListener('resize', closeNavHandler);
+  const anchors = document.querySelectorAll('.nav-anchor-link');
+  if (anchors) {
+    const onClickScrollToAnchor = evt => {
+      evt.preventDefault();
+      const anchor = evt.currentTarget.getAttribute('href');
+      const headerOffset = document.querySelector('.header').getBoundingClientRect().height;
+      const target = document.querySelector(anchor);
+      const offset = target.offsetTop - headerOffset;
+      closeNavHandler();
+      setTimeout(() => {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
+          duration: 1,
+          scrollTo: {
+            y: offset,
+            autoKill: true
+          },
+          ease: 'ease-in'
+        });
+      }, 400);
+    };
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', onClickScrollToAnchor);
+    });
+  }
 }
 
 /***/ }),
