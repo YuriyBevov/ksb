@@ -6,4 +6,17 @@
   .modal-closer {
     margin-top: 0;
   }
+
+  .modal__content {
+    background-color: transparent;
+  }
+
+  .modal-closer {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    background-color: var(--white);
+    border-radius: 50%;
+  }
 }

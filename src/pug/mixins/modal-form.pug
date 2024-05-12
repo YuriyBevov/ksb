@@ -5,7 +5,7 @@ mixin modal-form(data)
     input(type="hidden" name="Заполненная форма" value= data.formName)
 
     each field in data.fields
-      .offer-form__field
+      .offer-form__field(class= field.half ? 'offer-form__field--half' : null)
         if field.type == 'text' || field.type == 'tel'
           +main-input({
             type: field.type,

@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
 
     @include m-b-tablet-down {
-      background-image: none;
+      background-image: none !important;
     }
   }
 

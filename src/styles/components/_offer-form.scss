@@ -1,14 +1,29 @@
 .offer-form {
+  @extend .flex-wrap;
+  gap: 10px 20px;
+  width: 100%;
+
   &__field {
     @extend .flex-column;
-    margin-bottom: calc(var(--main-offset) / 1.5);
+    width: 100%;
+
+    &--half {
+      width: calc(50% - 10px);
+
+      @include m-b-mobile-lg-down {
+        width: 100%;
+      }
+    }
 
     label {
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+      font-style: 14px;
 
       @extend .lw-main-text;
       @extend .lw-main-text--accent;
+
+      font-size: 14px;
     }
 
     textarea {
@@ -25,15 +40,17 @@
       color: var(--primary);
       text-transform: initial;
       background-color: var(--white);
-      padding: 12px 20px;
+      padding: 8px 20px;
+      font-size: 14px;
 
       @include m-b-mobile-lg-down {
         font-size: 14px;
-        padding: 10px 16px;
+        padding: 8px 16px;
       }
 
       svg {
         fill: var(--primary);
+        min-width: 24px;
       }
 
       & + input {
