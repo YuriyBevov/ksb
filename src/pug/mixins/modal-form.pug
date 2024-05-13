@@ -1,9 +1,9 @@
 include ../mixins/main-input
 
 mixin modal-form(data)
-  form(action='#' id="offer-form").offer-form
+  form(action='mail.php' method="POST" id="offer-form").offer-form
     input(type="hidden" name="Заполненная форма" value= data.formName)
-
+    - console.log(data.formName)
     each field in data.fields
       .offer-form__field(class= field.half ? 'offer-form__field--half' : null)
         if field.type == 'text' || field.type == 'tel'
