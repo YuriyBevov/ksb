@@ -8,6 +8,9 @@
     background-position: bottom;
     background-repeat: no-repeat;
 
+    max-width: 1240px;
+    margin: 0 auto;
+
     @include m-b-tablet-down {
       background-image: none !important;
     }
