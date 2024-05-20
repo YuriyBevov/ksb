@@ -17,9 +17,19 @@ export function sendForm(form) {
     hideLoader();
     form.reset();
 
+    const fileFields = document.querySelectorAll('.file-attach-fake-control span');
+
+    if(fileFields.length) {
+      fileFields.forEach(field => {
+        field.innerHTML = "Прикрепить файл";
+      });
+    }
+
     const currentModal = form.closest(".modal");
 
-    new Modal(currentModal).refresh();
+    if(currentModal) {
+      new Modal(currentModal).refresh();
+    }
 
     setTimeout(() => {
       new Modal(successModal).show();
