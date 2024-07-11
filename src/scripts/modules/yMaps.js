@@ -1,7 +1,7 @@
 const map = document.querySelector("#yMaps");
 
 if (map) {
-  const centerCoords = [59.90297506420561, 30.39827949999997];
+  const centerCoords = [59.916892564210336,30.32883049999989];
 
   let myMap = null;
 
@@ -24,7 +24,7 @@ if (map) {
 
     // Метка
     const officePlacemark = new ymaps.Placemark(
-      [59.90297506420561, 30.39827949999997],
+      [59.916892564210336,30.32883049999989],
       {
         iconContent: "Завод металических дверей",
       },

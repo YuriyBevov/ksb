@@ -35,9 +35,9 @@ export function sendForm(form) {
       new Modal(successModal).show();
     }, 700);
 
-    // if (dataLayer) {
-    //   dataLayer.push({ event: "form-submit-event" });
-    // }
+    if (dataLayer) {
+      dataLayer.push({ event: "form-submit-event" });
+    }
   }
 
   function error() {
